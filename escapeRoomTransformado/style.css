@@ -1,0 +1,39 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e7c18e;
+  color: #523f2d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+h1, h2 {
+  color: #523f2d;
+}
+#game-container {
+  max-width: 600px;
+  width: 100%;
+  margin-top: 2rem;
+}
+.options button, #submitAnswer {
+  background-color: #523f2d;
+  color: #f3e2cd;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#inputArea {
+  margin-top: 1rem;
+}
+#inputArea input {
+  padding: 5px;
+  width: 60%;
+}
+#feedback {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+    
+    

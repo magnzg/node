@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Escape Room</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="tela-inicial">
+      <h1>Escape Room</h1>
+      <img src="img/capa.jpg" width="500px" height="300px">
+      <p>Resolva os enigmas para escapar da sala!</p>
+      <button onclick="iniciarJogo()" id="submitAnswer">Iniciar</button>
+    </div>
+
+    <div id="jogo" style="display: none;">
+      <h2 id="titulo-jogo">Escolha um objeto para investigar:</h2>
+      <div id="botoes">
+        <button onclick="escolher('grampeador')" id="submitAnswer">Grampeador</button>
+        <button onclick="escolher('papeis')" id="submitAnswer">Papéis</button>
+        <button onclick="escolher('almofada')" id="submitAnswer">Almofada</button>
+        <button onclick="escolher('livro')" id="submitAnswer">Livro</button>
+        <button onclick="escolher('janela')" id="submitAnswer">Janela</button>
+        <button onclick="escolher('armario')" id="submitAnswer">Armário</button>
+        <button onclick="verificarSaida()" id="submitAnswer">Tentar abrir a porta</button>
+      </div>
+      <br>
+      <div id="imagem-container"><img id="imagem-enigma" src="" alt="" /></div>
+      <p id="descricao"></p>
+      <input type="text" id="resposta" placeholder="Digite sua resposta..." />
+      <button onclick="responder()" id="submitAnswer">Enviar</button>
+      <p id="feedback"></p>
+    </div>
+
+    <div id="tela-final" style="display: none;">
+      <h2>Você escapou! Parabéns!</h2>
+      <img src="img/porta.png" alt="Porta Aberta" style="max-width: 300px;">
+      <button onclick="location.reload()" id="submitAnswer">Jogar Novamente</button>
+    </div>
+  </div>
+
+  <audio id="som-acerto" src="sons/acerto.mp3"></audio>
+  <audio id="som-erro" src="sons/erro.mp3"></audio>
+  <audio id="som-vitoria" src="sons/vitoria.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
